@@ -1,0 +1,24 @@
+{
+  "name": "uniroad-relay",
+  "version": "1.0.0",
+  "description": "Relay for Uniroad P2P agent network",
+  "homepage": "https://github.com/unicitynetwork/uniroad-relay#readme",
+  "bugs": {
+    "url": "https://github.com/unicitynetwork/uniroad-relay/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicitynetwork/uniroad-relay.git"
+  },
+  "license": "ISC",
+  "author": "cryptohog",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "gun": "^0.2020.1240"
+  }
+}
