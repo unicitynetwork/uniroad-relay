@@ -1,17 +1,9 @@
-const express = require('express');
-const Gun = require('gun');
-
-const PORT=8765;
-
-const app = express();
-
-// Enable Gun.js as a relay peer
-app.use(Gun.serve);
-
-// Serve on port 8765 (change if needed)
-const server = app.listen(PORT, () => {
-    console.log("Uniroad Gun Relay is running on "+PORT);
+const signaling = require('y-webrtc-signaling');
+const wss = signaling.setupWSS({
+    port: 4444,
+    host: '0.0.0.0',
+    certPath: '/path/to/cert.pem',    // Optional for SSL
+    keyPath: '/path/to/key.pem'       // Optional for SSL
 });
 
-// Initialize Gun with WebSockets
-Gun({ web: server });
+console.log('Signaling server running on port 4444');
